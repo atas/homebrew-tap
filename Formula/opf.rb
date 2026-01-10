@@ -5,21 +5,21 @@
 class Opf < Formula
   desc "On-demand Kubernetes port forwarding proxy"
   homepage "https://github.com/atas/ondemand-port-forward"
-  version "0.0.2"
+  version "0.0.4"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/atas/ondemand-port-forward/releases/download/v0.0.2/opf_0.0.2_darwin_amd64.tar.gz"
-    sha256 "d42c1e78e5401b771e886997188f520247ba996ee95c4ecaa7e209388b9c9e04"
+    url "https://github.com/atas/ondemand-port-forward/releases/download/v0.0.4/opf_0.0.4_darwin_amd64.tar.gz"
+    sha256 "37f39c4fdc443496443ce0d41c4a91f69c5a0ee55ab3345e289459f984df91e6"
 
     def install
       bin.install "opf"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/atas/ondemand-port-forward/releases/download/v0.0.2/opf_0.0.2_darwin_arm64.tar.gz"
-    sha256 "2e3b6b6b10d4d5d7130f5dc029973dab7df2181b174822e6eb4fe42be8739d98"
+    url "https://github.com/atas/ondemand-port-forward/releases/download/v0.0.4/opf_0.0.4_darwin_arm64.tar.gz"
+    sha256 "7d1deaaefa8690331e14696f343f54e4714d1111516f5552a6a0dd6b305a5a93"
 
     def install
       bin.install "opf"
