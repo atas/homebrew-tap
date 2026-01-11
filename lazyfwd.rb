@@ -5,21 +5,21 @@
 class Lazyfwd < Formula
   desc "On-demand Kubernetes port forwarding proxy"
   homepage "https://github.com/atas/lazyfwd"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/atas/lazyfwd/releases/download/v0.0.2/lazyfwd_0.0.2_darwin_amd64.tar.gz"
-      sha256 "bbe1f717f32107793092b666d5c93c394bc9b2b03e8e151cffc2f1687851333f"
+      url "https://github.com/atas/lazyfwd/releases/download/v0.0.3/lazyfwd_0.0.3_darwin_amd64.tar.gz"
+      sha256 "52f92955af4725b08c421a77da1aaf35a2f0fb3ff906dc961e6c15839b035cca"
 
       def install
         bin.install "lazyfwd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/atas/lazyfwd/releases/download/v0.0.2/lazyfwd_0.0.2_darwin_arm64.tar.gz"
-      sha256 "64cbdfd849f3693d71218ec106ccbd7c9ab2f6c9519e09112858b14e4f1d0334"
+      url "https://github.com/atas/lazyfwd/releases/download/v0.0.3/lazyfwd_0.0.3_darwin_arm64.tar.gz"
+      sha256 "e3d427d3789e6d0c8b89a02e658e6db5e79f615edbebe373601809c3f5c9d0a4"
 
       def install
         bin.install "lazyfwd"
@@ -29,19 +29,35 @@ class Lazyfwd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/atas/lazyfwd/releases/download/v0.0.2/lazyfwd_0.0.2_linux_amd64.tar.gz"
-      sha256 "f65260350370f35c835cd01f54e7de7a0e2b249feed357f645da207c37a974d1"
+      url "https://github.com/atas/lazyfwd/releases/download/v0.0.3/lazyfwd_0.0.3_linux_amd64.tar.gz"
+      sha256 "7f04519b7c8d57a21a9e2f91654b15da7cb5ac43c85d7bfae0cf73645e88d2b4"
       def install
         bin.install "lazyfwd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/atas/lazyfwd/releases/download/v0.0.2/lazyfwd_0.0.2_linux_arm64.tar.gz"
-      sha256 "08ab03828476587f595901943290e232a99ab393f10775730bc195e935f0a09e"
+      url "https://github.com/atas/lazyfwd/releases/download/v0.0.3/lazyfwd_0.0.3_linux_arm64.tar.gz"
+      sha256 "6df00039d31954b057bd8e99b28b5ec391c5b9a1d323b4893925e85b20d75148"
       def install
         bin.install "lazyfwd"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      To run lazyfwd as a background service:
+        brew services start lazyfwd
+
+      View service logs:
+        tail -f $(brew --prefix)/var/log/lazyfwd.log
+
+      For manual runs:
+        lazyfwd
+
+      ⚠️ After running, edit the created 🔴 ~/.lazyfwd.yaml and add your routes!!! ‼️
+      Route changes will be picked up automatically.
+    EOS
   end
 
   service do
