@@ -5,21 +5,21 @@
 class Lazyfwd < Formula
   desc "On-demand Kubernetes port forwarding proxy"
   homepage "https://github.com/atas/lazyfwd"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/atas/lazyfwd/releases/download/v0.0.1/lazyfwd_0.0.1_darwin_amd64.tar.gz"
-      sha256 "14c4b29b2a116b8587a75e22d921472249f73106e438ca6096b14a5f16324417"
+      url "https://github.com/atas/lazyfwd/releases/download/v0.0.2/lazyfwd_0.0.2_darwin_amd64.tar.gz"
+      sha256 "bbe1f717f32107793092b666d5c93c394bc9b2b03e8e151cffc2f1687851333f"
 
       def install
         bin.install "lazyfwd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/atas/lazyfwd/releases/download/v0.0.1/lazyfwd_0.0.1_darwin_arm64.tar.gz"
-      sha256 "c296d1493e65a7d624fba180dbad2adbd7bf8fa31ad92610e5403bfd422a839e"
+      url "https://github.com/atas/lazyfwd/releases/download/v0.0.2/lazyfwd_0.0.2_darwin_arm64.tar.gz"
+      sha256 "64cbdfd849f3693d71218ec106ccbd7c9ab2f6c9519e09112858b14e4f1d0334"
 
       def install
         bin.install "lazyfwd"
@@ -29,15 +29,15 @@ class Lazyfwd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/atas/lazyfwd/releases/download/v0.0.1/lazyfwd_0.0.1_linux_amd64.tar.gz"
-      sha256 "c1737aa05e57f6feb9de25ac72489cd53453b7764d9989574dc6e483fb2d0c86"
+      url "https://github.com/atas/lazyfwd/releases/download/v0.0.2/lazyfwd_0.0.2_linux_amd64.tar.gz"
+      sha256 "f65260350370f35c835cd01f54e7de7a0e2b249feed357f645da207c37a974d1"
       def install
         bin.install "lazyfwd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/atas/lazyfwd/releases/download/v0.0.1/lazyfwd_0.0.1_linux_arm64.tar.gz"
-      sha256 "9fbcfb7e58b33ed23a7e2f7dbd1be83c6553a63274d7ef96dd501c11704003f2"
+      url "https://github.com/atas/lazyfwd/releases/download/v0.0.2/lazyfwd_0.0.2_linux_arm64.tar.gz"
+      sha256 "08ab03828476587f595901943290e232a99ab393f10775730bc195e935f0a09e"
       def install
         bin.install "lazyfwd"
       end
