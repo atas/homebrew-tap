@@ -3,7 +3,7 @@ cask "lazyfwd" do
   name "lazyfwd"
   desc "On-demand Kubernetes port forwarding proxy"
   homepage "https://github.com/atas/lazyfwd"
-  version "0.0.4-beta1"
+  version "0.0.4-beta2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "lazyfwd" do
   on_macos do
     on_intel do
       url "https://github.com/atas/lazyfwd/releases/download/v#{version}/lazyfwd_#{version}_darwin_amd64.tar.gz"
-      sha256 "f23760515c776f2472c0b7339b658284472cf3deec108357beec813a6d739b0f"
+      sha256 "f12f882b803db1206b32d3c973f1bbadf6d0f133a74969709835c455c64d4776"
     end
     on_arm do
       url "https://github.com/atas/lazyfwd/releases/download/v#{version}/lazyfwd_#{version}_darwin_arm64.tar.gz"
-      sha256 "4e4a698ef4d9a454f01d77695239bfb1bd7924fd9e49d1134be77c4f07b09afe"
+      sha256 "4603f0bc36d0af1ee381969af8dc78d488b781aa6da7004afc60ee7dd5ee62f6"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/atas/lazyfwd/releases/download/v#{version}/lazyfwd_#{version}_linux_amd64.tar.gz"
-      sha256 "2a626af34d186e66ba5b2c38ca8f379d9a88fff4c01f4054ca2ceb1c32e0d9a4"
+      sha256 "83f15d6d83123d1e6c2f3d204b36742d6275406eed2e0d64848d0286d277f43d"
     end
     on_arm do
       url "https://github.com/atas/lazyfwd/releases/download/v#{version}/lazyfwd_#{version}_linux_arm64.tar.gz"
-      sha256 "cde561a267c9ba417d46173b5765da3586cd2d4e1e2a24a3dc7b3dbabd66ec21"
+      sha256 "cd9a75644fe22e0bad131996677749619f51ce17a2d361cefad99367c0c4b765"
     end
   end
 
@@ -52,7 +52,7 @@ cask "lazyfwd" do
     "Route changes will be picked up automatically."
   end
 
-  service "contrib/lazyfwd.plist"
+  service "lazyfwd.plist"
 
   uninstall launchctl: [
       "com.atas.lazyfwd",
