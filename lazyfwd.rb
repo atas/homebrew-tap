@@ -5,21 +5,21 @@
 class Lazyfwd < Formula
   desc "On-demand Kubernetes port forwarding proxy"
   homepage "https://github.com/atas/lazyfwd"
-  version "0.0.4"
+  version "0.0.5-beta1v0.0.5-beta1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/atas/lazyfwd/releases/download/v0.0.4/lazyfwd_0.0.4_darwin_amd64.tar.gz"
-      sha256 "7f3ecbbb5dddbe7619e07f050a6d426631fa3532f83787db77a7e023b01b4554"
+      url "https://github.com/atas/lazyfwd/releases/download/v0.0.5-beta1v0.0.5-beta1/lazyfwd_0.0.5-beta1v0.0.5-beta1_darwin_amd64.tar.gz"
+      sha256 "769d0acd8260776afe8e975c7016781b56a9f0467fe266a31be9329324960d4c"
 
       def install
         bin.install "lazyfwd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/atas/lazyfwd/releases/download/v0.0.4/lazyfwd_0.0.4_darwin_arm64.tar.gz"
-      sha256 "80372fa87e10152db470a2f18131673433928bd4086a3b2ca57335257daa6399"
+      url "https://github.com/atas/lazyfwd/releases/download/v0.0.5-beta1v0.0.5-beta1/lazyfwd_0.0.5-beta1v0.0.5-beta1_darwin_arm64.tar.gz"
+      sha256 "c0ab1ead5b5b69342a1c4bbe563ce30bcdae13f1197e8fae8f43e0d470f75512"
 
       def install
         bin.install "lazyfwd"
@@ -29,15 +29,15 @@ class Lazyfwd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/atas/lazyfwd/releases/download/v0.0.4/lazyfwd_0.0.4_linux_amd64.tar.gz"
-      sha256 "f3403ea0496742e3492a29ed97cb8f5cbe0de3649c10a8a22456e3babc9bd324"
+      url "https://github.com/atas/lazyfwd/releases/download/v0.0.5-beta1v0.0.5-beta1/lazyfwd_0.0.5-beta1v0.0.5-beta1_linux_amd64.tar.gz"
+      sha256 "c86509e0f4dec3e8fbf02eecd4e3029629480e0b0d3ccb3c65092d59aef298c8"
       def install
         bin.install "lazyfwd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/atas/lazyfwd/releases/download/v0.0.4/lazyfwd_0.0.4_linux_arm64.tar.gz"
-      sha256 "553ae8ec439d22fe5457f7f056bbd337b0c115e617161590117aa9d7f36cc100"
+      url "https://github.com/atas/lazyfwd/releases/download/v0.0.5-beta1v0.0.5-beta1/lazyfwd_0.0.5-beta1v0.0.5-beta1_linux_arm64.tar.gz"
+      sha256 "859b83d70f0910b808e3871f904c97ca280c73bdac481fbced61277b3d73b9dd"
       def install
         bin.install "lazyfwd"
       end
