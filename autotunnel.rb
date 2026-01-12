@@ -5,21 +5,21 @@
 class Autotunnel < Formula
   desc "On-demand Kubernetes port forwarding proxy"
   homepage "https://github.com/atas/autotunnel"
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/atas/autotunnel/releases/download/v0.0.7/autotunnel_0.0.7_darwin_amd64.tar.gz"
-      sha256 "86373455724e8a88c3f6487f94c3bc327948afd51339d3f2b74071356f903f72"
+      url "https://github.com/atas/autotunnel/releases/download/v0.0.8/autotunnel_0.0.8_darwin_amd64.tar.gz"
+      sha256 "3ed82c5c0a7835eb5f99f64eb30d2c7529edfab440d8811dbf9f749643c2bc68"
 
       def install
         bin.install "autotunnel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/atas/autotunnel/releases/download/v0.0.7/autotunnel_0.0.7_darwin_arm64.tar.gz"
-      sha256 "bbc1c17e80d14b59816003b295754efeda712cdcb91533b3d9370608a32c35a9"
+      url "https://github.com/atas/autotunnel/releases/download/v0.0.8/autotunnel_0.0.8_darwin_arm64.tar.gz"
+      sha256 "44066c03860c456d0521ffa197db914f17a97ea569bccbaf9fb06e86792872e0"
 
       def install
         bin.install "autotunnel"
@@ -29,15 +29,15 @@ class Autotunnel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/atas/autotunnel/releases/download/v0.0.7/autotunnel_0.0.7_linux_amd64.tar.gz"
-      sha256 "291400eae843978226a8251d15fc05b8dc09aec76e8f696b111f4e5ff84ca291"
+      url "https://github.com/atas/autotunnel/releases/download/v0.0.8/autotunnel_0.0.8_linux_amd64.tar.gz"
+      sha256 "8677921121076d1eac8eec18778912045dd91fdac7f10cf26fbb39a175cdec48"
       def install
         bin.install "autotunnel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/atas/autotunnel/releases/download/v0.0.7/autotunnel_0.0.7_linux_arm64.tar.gz"
-      sha256 "15581d0fd11c1acba76ac3852f2473e43eaaf6d58cef326ea44aabaff5c3215d"
+      url "https://github.com/atas/autotunnel/releases/download/v0.0.8/autotunnel_0.0.8_linux_arm64.tar.gz"
+      sha256 "7c2984572a713bda177b1c95c04ad4dff396451ae120e854804913c0502db978"
       def install
         bin.install "autotunnel"
       end
