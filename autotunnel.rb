@@ -5,23 +5,23 @@
 class Autotunnel < Formula
   desc "On-demand Kubernetes port forwarding proxy"
   homepage "https://github.com/atas/autotunnel"
-  version "0.0.10"
+  version "0.0.11-beta1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/atas/autotunnel/releases/download/v0.0.10/autotunnel_0.0.10_darwin_amd64.tar.gz"
-      sha256 "23dab6d0de559faf87183c4eb825490f194c9321a741441a15300bd7877c9b56"
+      url "https://github.com/atas/autotunnel/releases/download/v0.0.11-beta1/autotunnel_0.0.11-beta1_darwin_amd64.tar.gz"
+      sha256 "109b94f10812fce9d9226e4a561479c19693d9efab5274b3349d10621ab51cd5"
 
-      def install
+      define_method(:install) do
         bin.install "autotunnel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/atas/autotunnel/releases/download/v0.0.10/autotunnel_0.0.10_darwin_arm64.tar.gz"
-      sha256 "f4edfa41b504df4fd252e23743f99f288993c1b8e54b10cf19655a5b250edd41"
+      url "https://github.com/atas/autotunnel/releases/download/v0.0.11-beta1/autotunnel_0.0.11-beta1_darwin_arm64.tar.gz"
+      sha256 "7647f2848a462762fa2fd780a07dfb3a3d1fef72ae92c9096721d274e72540a4"
 
-      def install
+      define_method(:install) do
         bin.install "autotunnel"
       end
     end
@@ -29,16 +29,16 @@ class Autotunnel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/atas/autotunnel/releases/download/v0.0.10/autotunnel_0.0.10_linux_amd64.tar.gz"
-      sha256 "fbefa3e7fe621d65a391bc9809ca4dffd948f54cce9725e8514916afeff1f957"
-      def install
+      url "https://github.com/atas/autotunnel/releases/download/v0.0.11-beta1/autotunnel_0.0.11-beta1_linux_amd64.tar.gz"
+      sha256 "b509b3c21e35d7f859ce043ac564d1d95946912701cf87e955fd6e5bdcf2bf04"
+      define_method(:install) do
         bin.install "autotunnel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/atas/autotunnel/releases/download/v0.0.10/autotunnel_0.0.10_linux_arm64.tar.gz"
-      sha256 "2b5f868cad207111f3be4873cee6a435d14279db4e4459a866bd842df24405f3"
-      def install
+      url "https://github.com/atas/autotunnel/releases/download/v0.0.11-beta1/autotunnel_0.0.11-beta1_linux_arm64.tar.gz"
+      sha256 "65ffe637992c634cde1cb67f3fa95cae96f2235381670bdbb3df9ba84560311c"
+      define_method(:install) do
         bin.install "autotunnel"
       end
     end
