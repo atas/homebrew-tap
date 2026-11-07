@@ -2,8 +2,8 @@
 # `scripts/release.sh casks` from packaging/homebrew/nazar.rb.in in the
 # nazar repository; edit the template, not the rendered cask.
 cask "nazar" do
-  version "0.1.1"
-  sha256 "2ba434e5b135a7f2e0fd115fa06824e663c6fb4ec844e22fa92e642b965e560a"
+  version "0.1.2"
+  sha256 "3addfa7fb909819a166b1174951d4348e21a97729fa82e48396a96b2a7f1e880"
 
   url "https://github.com/atas/nazar/releases/download/v#{version}/nazar-#{version}.zip"
   name "nazar"
